@@ -1,0 +1,4 @@
+@EndUserText.label: 'Travel Service Def.'
+define service Zdevl__travel_sd {
+  expose zdevl_cds3;
+}

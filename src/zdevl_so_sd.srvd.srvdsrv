@@ -1,0 +1,4 @@
+@EndUserText.label: 'SO SD'
+define service Zdevl_so_sd {
+  expose ZDEVL_SO_CDS;
+}
