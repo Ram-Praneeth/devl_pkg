@@ -12,7 +12,8 @@ define view zdevl_cds1
       booking_date,
       customer_id,
        cast('USD' as abap.cuky) as currency,
-       cast('M3' as abap.unit( 3 ) ) as capacity
+       cast('M3' as abap.unit( 3 ) ) as capacity,
+       concat(travel_id, booking_id) as objid
        
 
 }
