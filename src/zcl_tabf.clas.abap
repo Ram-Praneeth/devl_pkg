@@ -12,7 +12,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_tabf IMPLEMENTATION.
+CLASS ZCL_TABF IMPLEMENTATION.
+
+
   METHOD get_travel BY DATABASE FUNCTION
    FOR HDB LANGUAGE
   SQLSCRIPT OPTIONS READ-ONLY USING /dmo/airport.
@@ -33,5 +35,4 @@ CLASS zcl_tabf IMPLEMENTATION.
                               group by name,city,country;
 
   ENDMETHOD.
-
 ENDCLASS.

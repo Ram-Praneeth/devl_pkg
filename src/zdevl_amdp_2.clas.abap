@@ -29,7 +29,9 @@ ENDCLASS.
 
 
 
-CLASS zdevl_amdp_2 IMPLEMENTATION.
+CLASS ZDEVL_AMDP_2 IMPLEMENTATION.
+
+
   METHOD get_flight BY DATABASE PROCEDURE FOR HDB LANGUAGE
     SQLSCRIPT OPTIONS READ-ONLY
       USING /dmo/flight.
@@ -57,6 +59,7 @@ declare fli1 table(
 
   ENDMETHOD.
 
+
   METHOD if_oo_adt_classrun~main.
     zdevl_amdp_2=>get_flight(
       IMPORTING
@@ -68,5 +71,4 @@ declare fli1 table(
         data   = fli
     ).
   ENDMETHOD.
-
 ENDCLASS.

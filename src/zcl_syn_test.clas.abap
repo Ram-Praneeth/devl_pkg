@@ -12,10 +12,17 @@ ENDCLASS.
 
 
 
-CLASS zcl_syn_test IMPLEMENTATION.
+CLASS ZCL_SYN_TEST IMPLEMENTATION.
+
 
   METHOD if_oo_adt_classrun~main.
 
+**********************************************************************
+
+
+**********************************************************************
+
+**********************************************************************
     DATA lr_carr TYPE RANGE OF /dmo/carrier_id.
 
     SELECT FROM /dmo/flight FIELDS
@@ -35,8 +42,9 @@ CLASS zcl_syn_test IMPLEMENTATION.
     TRY.
 
         SELECT SINGLE * FROM /dmo/carrier
-         WHERE carrier_id = @( gt_carr[ carrier_id = 'AA' ]-carrier_id )
-      INTO @DATA(ls_carr).
+         WHERE carrier_id = @( gt_carr[ carrier_id = 'AA' ]-carrier_id  )
+         INTO @DATA(ls_carr).
+
 
       CATCH cx_sy_itab_line_not_found.
 
@@ -50,7 +58,7 @@ CLASS zcl_syn_test IMPLEMENTATION.
 
 *    out->write( count ).
     out->write( gt_carr ).
+**********************************************************************
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -11,7 +11,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_num_ran IMPLEMENTATION.
+CLASS ZCL_NUM_RAN IMPLEMENTATION.
+
+
   METHOD if_oo_adt_classrun~main.
     DATA : lv_norange  TYPE REF TO cl_numberrange_objects,
            lv_interval TYPE REF TO cl_numberrange_intervals,
@@ -88,5 +90,4 @@ CLASS zcl_num_ran IMPLEMENTATION.
 
 
   ENDMETHOD.
-
 ENDCLASS.
